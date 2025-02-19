@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+    <style>
+        .running-text {
+            overflow: hidden;
+            white-space: nowrap;
+            animation: scroll 10s linear infinite;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .prestasi-item {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+           }
+
+        .prestasi-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        body {
+        background-color: #bcbcbc;
+    }
+
+    </style>
+</head>
+
+<body>
+    <header class="bg-red-800">
+        <div class="mx-auto max-w-screen-xl px-5 sm:px-7 lg:px-8">
+            <div class="flex h-16 items-center justify-center">
+                <div class="flex-1 md:flex md:items-center md:justify-center">
+                    <a class="block text-white text-2xl font-bold text-center mx-auto content-center" href="#">Prestasi
+                        Moklet</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div>
+        <iframe id="videoFrame" width="560" height="315" src="https://www.youtube.com/embed/UwVau7nlWGs" class="w-260 h-162" frameborder="0" allowfullscreen=""></iframe>
+    </div>
+    
+    
+
+    <div class="gap-7 absolute inset-y-20 right-0 w-120 prestasi">
+        <div data-video="U8d1QrngA2E" class="prestasi-item bg-white p-3 rounded-lg shadow mb-4">Prestasi 1</div>
+        <div data-video="M3XQ_uAymmA" class="prestasi-item bg-white p-3 rounded-lg shadow mb-4">Prestasi 2</div>
+        <div data-video="UwVau7nlWGs" class="prestasi-item bg-white p-3 rounded-lg shadow mb-4">Prestasi 3</div>
+        <div data-video="htblsVlBnqw" class="prestasi-item bg-white p-3 rounded-lg shadow mb-4">Prestasi 4</div>
+        <div data-video="erBHLGjLdt4" class="prestasi-item bg-white p-3 rounded-lg shadow mb-4">Prestasi 5</div>
+    </div>
+
+    <div class="bg-red-800">
+        <div class="max-auto max-w-screen-xl px-2 sm:p-3 lg:px-2">
+            <div class="flex h-10 items-center justify-between">
+                <div class="flex-1 md:flex md:items-center md:gap-12">
+                    <a class="text-white running-text">🔥Selamat Datang di Prestasi Moklet! Lihat beberapa Prestasi dari
+                        siswa terbaik kami!🔥</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
